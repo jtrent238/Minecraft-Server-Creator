@@ -5,9 +5,9 @@ import os
 # import sleep to show output for some time period
 from time import sleep
  
-print("========================================================================")
-print("========Minecraft Server Creator By jtrent238 | Version 1.0.0.0=========")
-print("========================================================================")
+print("==========================================================================")
+print("======== Minecraft Server Creator By jtrent238 | Version 1.0.0.0 =========")
+print("==========================================================================")
 
 sleep(2)
 
@@ -53,7 +53,7 @@ ask_spawn_monsters = input("Do you want monsters to spawn? (Enter true or false)
 ask_spawn_animals = input("Do you want animals to spawn? (Enter true or false) ")
 ask_hardcore = input("Do you want to enable hardcore? (Enter true or false) ")
 ask_whitelist= input("Do you want to enable Whitelist?  (Enter true or false) ")
-ask_npcs= input("Do you want to enable whitelist?  (Enter true or false) ")
+ask_npcs= input("Do you want to npcs to spawn?  (Enter true or false) ")
 ask_seed= input("Seed: ");
 ask_permlvl= input("Permission Level: ");
 ask_world_name= input("World Name: ");
@@ -109,7 +109,7 @@ server_properties.close();
 sleep(2)
  
 # now call function we defined above
-clear()
+#clear()
 
 print("========================================================================")
 print("Server Properties Configured!")
