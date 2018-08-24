@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-# import only system from os
-from os import system
+import os
  
 # import sleep to show output for some time period
 from time import sleep
