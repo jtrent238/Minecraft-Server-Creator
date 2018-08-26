@@ -4,7 +4,10 @@ import os
  
 # import sleep to show output for some time period
 from time import sleep
- 
+
+import urllib.request
+import wget
+
 print("==========================================================================")
 print("======== Minecraft Server Creator By jtrent238 | Version 1.0.0.0 =========")
 print("==========================================================================")
@@ -116,3 +119,19 @@ print("Server Properties Configured!")
 print("========================================================================")
 print("NOTE: Some options will need to be manually configured if you want something other than default values because they were skipped!")
 print("========================================================================")
+
+ask_minecraftversion= input("What version of Minecraft do you want your server to be? [ex. 1.12] ")
+minecraftversion = 'spigot-' + ask_minecraftversion;
+
+# Download Minecraft Server Files
+print('Version ' + minecraftversion + ' Selected!');
+print('Beginning download of Minecraft ' + minecraftversion + '...');
+#url = 'https://launcher.mojang.com/mc/game/' + minecraftversion + '/server/fe123682e9cb30031eae351764f653500b7396c9/server.jar'
+
+url = 'https://cdn.getbukkit.org/spigot/' + minecraftversion + '.jar'
+urllib.request.urlretrieve(url, 'Server/' + minecraftversion + '.jar');
+print('Version ' + minecraftversion + ' downloaded!');
+
+#os.system('cd Server');
+#os.system('dir');
+#os.system('java -Xincgc -Xmx1G -jar ' + minecraftversion + '.jar -o false nogui');
