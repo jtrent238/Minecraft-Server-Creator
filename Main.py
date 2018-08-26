@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from raven import Client
+
 import os
  
 # import sleep to show output for some time period
@@ -7,6 +9,10 @@ from time import sleep
 
 import urllib.request
 import wget
+
+client = Client('https://a65471b6dda6414ebcdb13f9fce338ea:7ec6f32c1b4347e6b768358d0590d24a@sentry.io/1268907')
+
+Raven.config('https://a65471b6dda6414ebcdb13f9fce338ea@sentry.io/1268907', { release: '0e4fdef81448dcfa0e16ecc4433ff3997aa53572'});
 
 print("==========================================================================")
 print("======== Minecraft Server Creator By jtrent238 | Version 1.0.0.0 =========")
