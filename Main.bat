@@ -7,11 +7,22 @@ If NOT exist "Temp" (
 
 SET TEMP_PYTHONVERSION=%random%.temp
 
+SET wget_NotInstalled=false
+SET raven_NotInstalled=false
+
 python -V>>Temp\%TEMP_PYTHONVERSION%
 echo %TEMP_PYTHONVERSION%
 echo Current Python version: <Temp\%TEMP_PYTHONVERSION%
 
-::pip install wget
-::pip install raven --upgrade
-::python Main.py
+If %wget_NotInstalled% "false" (
+	pip install wget
+	SET wget_NotInstalled=true
+}
+
+If %raven_NotInstalled% "false" (
+	pip install raven --upgrade
+	SET raven_NotInstalled=true
+)
+
+python Main.py
 pause>nul
